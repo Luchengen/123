@@ -1,2 +1,5 @@
 .vnev
 _pycache_
+.env
+instance/
+*.db
