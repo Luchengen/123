@@ -1,18 +1,45 @@
 <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>Flask MVP</title>
-            <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
-        </head>
-        <body>
-            {% extends "navbar.html" %}
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歡迎來到傳說對決排行榜</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
 
-            {% block content %}
-            
-            <h1>Flask MVP Website</h1>
-            <p>這是一個最小可行版本的 Flask 網站。</p>
-        {% endblock %}
-        </body>
-    </html>
+<body>
+    {% extends "navbar.html" %}
+
+    {% block content %}
+    <div class="wrapper">
+        <div class="header-section">
+            <h1 class="main-title">歡迎來到傳說對決排行榜</h1>
+            <p class="intro-text">
+                這裡提供查詢傳說對決的英雄數據、各服出裝排行、玩家資訊、歷史戰機、天梯排行榜等功能，幫助對出裝沒有想法，或是想嘗試不同套路的您。
+            </p>
+        </div>
+
+        <div class="grid-container">
+            <a href="#" class="feature-card">
+                <h2 class="card-title">查英雄、裝備排行</h2>
+                <p class="card-desc">隨時更新英雄相關數值、以及各國頂尖玩家的出裝排行</p>
+            </a>
+
+            <a href="#" class="feature-card">
+                <h2 class="card-title">查玩家、查戰績</h2>
+                <p class="card-desc">查詢玩家的常用英雄或對戰資料等資訊</p>
+            </a>
+
+            <a href="#" class="feature-card">
+                <h2 class="card-title">查排行榜</h2>
+                <p class="card-desc">查詢排位賽/英雄全服排行(排位排行榜每半小時更新，全服、裝備排行則每日0,5,13,17,21時更新)</p>
+            </a>
+        </div>
+
+    </div>
+{% endblock %}
+</body>
+</html>
